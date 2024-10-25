@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Pemilihan Kandidat</title>
+    <link rel="stylesheet" href="pemilihan.css">
+    <!-- Tambahkan pustaka Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Pemilihan Kandidat</h1>
+    <div class="candidates">
+        <div class="candidate" id="candidate1">
+            <h2>Kandidat 1</h2>
+            <button onclick="vote('candidate1')">Pilih</button>
+        </div>
+        <div class="candidate" id="candidate2">
+            <h2>Kandidat 2</h2>
+            <button onclick="vote('candidate2')">Pilih</button>
+        </div>        
+        <div class="candidate" id="candidate3">
+            <h2>Kandidat 3</h2>
+            <button onclick="vote('candidate3')">Pilih</button>
+        </div>
+    </div>
+
+    <h2>Hasil Pemilihan</h2>
+    <div id="resultsContainer">
+        <div id="results"></div>
+        <canvas id="pieChart" width="400" height="400"></canvas>
+    </div>
+
+    <!-- Pastikan script diletakkan di bawah, sebelum tag penutup body -->
+    <script src="chart.js"></script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+.candidates {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; /* Agar lebih responsif di layar kecil */
+    margin-bottom: 20px;
+}
+
+.candidate {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    width: 150px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Memberikan efek bayangan */
+    transition: transform 0.2s ease; /* Menambahkan animasi hover */
+}
+
+.candidate:hover {
+    transform: translateY(-10px); /* Efek hover saat di atas kandidat */
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838; /* Warna sedikit lebih gelap saat hover */
+}
+
+button:disabled {
+    background-color: #ccc; /* Warna lebih jelas saat disabled */
+    cursor: not-allowed;
+}
+
+.results {
+    margin-top: 20px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+#pieChart {
+    position: fixed;
+    bottom: 50px; /* Jarak dari bawah */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;  /* Ukuran lebih fleksibel */
+    max-width: 400px; /* Maksimal ukuran di layar besar */
+    height: auto;  /* Sesuaikan ukuran otomatis */
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .candidates {
+        flex-direction: column; /* Kandidat akan ditampilkan vertikal di layar kecil */
+    }
+
+    .candidate {
+        width: auto; /* Lebar kandidat mengikuti layar */
+        margin-bottom: 10px;
+    }
+
+    #pieChart {
+        width: 90%; /* Lebar grafik lebih kecil pada layar kecil */
+    }
+}
